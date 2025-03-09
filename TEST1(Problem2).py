@@ -52,25 +52,7 @@ ax.set_ylabel("Number of Students")
 ax.set_title("Department-wise Enrollment")
 st.pyplot(fig)
 
-# Comparison between Spring and Fall terms
-st.subheader("Spring vs. Fall Term Comparison")
-spring_data = df[df['Term'] == 'Spring']
-fall_data = df[df['Term'] == 'Fall']
 
-fig, ax = plt.subplots(1, 2, figsize=(12, 5))
-ax[0].plot(spring_data['Year'], spring_data['Enrolled'], label='Spring', marker='o')
-ax[0].plot(fall_data['Year'], fall_data['Enrolled'], label='Fall', marker='o')
-ax[0].set_ylabel("Enrolled Students")
-ax[0].set_title("Enrollment Trends: Spring vs. Fall")
-ax[0].legend()
-
-ax[1].plot(spring_data['Year'], spring_data['Student Satisfaction (%)'], label='Spring', marker='o')
-ax[1].plot(fall_data['Year'], fall_data['Student Satisfaction (%)'], label='Fall', marker='o')
-ax[1].set_ylabel("Satisfaction (%)")
-ax[1].set_title("Satisfaction Trends: Spring vs. Fall")
-ax[1].legend()
-
-st.pyplot(fig)
 
 # Insights and Summary
 st.subheader("Key Insights")
