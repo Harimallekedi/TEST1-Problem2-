@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 # Load data
 def load_data():
     file_path = "university_student_dashboard_data.csv"
